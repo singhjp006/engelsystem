@@ -30,7 +30,7 @@ Please read how to deploy to [Heroku here](/docs/HEROKU.md)
 
 ## Report Bugs
 
-Please report bugs and feature requests here https://github.com/fossasia/engelsystem/issues
+Please report bugs and feature requests here https://github.com/engelsystem/engelsystem/issues
 
 # Features of Engelsystem
 
