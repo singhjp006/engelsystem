@@ -78,6 +78,7 @@ if (isset($_REQUEST['p']) && preg_match("/^[a-z0-9_]*$/i", $_REQUEST['p']) && (i
     $content = user_myshifts();
   } elseif ($p == "user_shifts") {
     $title = shifts_title();
+
     $content = user_shifts();
   } elseif ($p == "user_messages") {
     $title = messages_title();
@@ -97,46 +98,46 @@ if (isset($_REQUEST['p']) && preg_match("/^[a-z0-9_]*$/i", $_REQUEST['p']) && (i
   } elseif ($p == "logout") {
     $title = logout_title();
     $content = guest_logout();
-  } elseif ($p == "admin_questions") {
+  } elseif ($p == "admin_questions_controller") {
     $title = admin_questions_title();
     $content = admin_questions();
-  } elseif ($p == "admin_user") {
+  } elseif ($p == "admin_user_controller") {
     $title = admin_user_title();
     $content = admin_user();
-  } elseif ($p == "admin_arrive") {
+  } elseif ($p == "admin_arrive_controller") {
     $title = admin_arrive_title();
     $content = admin_arrive();
-  } elseif ($p == "admin_active") {
+  } elseif ($p == "admin_active_controller") {
     $title = admin_active_title();
     $content = admin_active();
-  } elseif ($p == "admin_free") {
+  } elseif ($p == "admin_free_controller") {
     $title = admin_free_title();
     $content = admin_free();
-  } elseif ($p == "admin_news") {
-    require_once realpath(__DIR__ . '/../includes/pages/admin_news.php');
+  } elseif ($p == "admin_news_controller") {
+    require_once realpath(__DIR__ . '/../includes/controller/admin_news_controller.php');
     $content = admin_news();
-  } elseif ($p == "admin_rooms") {
+  } elseif ($p == "admin_rooms_controller") {
     $title = admin_rooms_title();
     $content = admin_rooms();
-  } elseif ($p == "admin_groups") {
+  } elseif ($p == "admin_groups_controller") {
     $title = admin_groups_title();
     $content = admin_groups();
   } elseif ($p == "admin_language") {
     require_once realpath(__DIR__ . '/../includes/pages/admin_language.php');
     $content = admin_language();
-  } elseif ($p == "admin_import") {
+  } elseif ($p == "admin_import_controller") {
     $title = admin_import_title();
     $content = admin_import();
-  } elseif ($p == "admin_shifts") {
+  } elseif ($p == "admin_shifts_controller") {
     $title = admin_shifts_title();
     $content = admin_shifts();
-  } elseif ($p == "admin_log") {
+  } elseif ($p == "admin_log_controller") {
     $title = admin_log_title();
     $content = admin_log();
-  } elseif ($p == "admin_settings") {
+  } elseif ($p == "admin_settings_controller") {
     $title = admin_settings_title();
     $content = admin_settings();
-  } elseif ($p == "admin_export") {
+  } elseif ($p == "admin_export_controller") {
     $title = admin_export_title();
     $content = admin_export();
   } elseif ($p == "credits") {

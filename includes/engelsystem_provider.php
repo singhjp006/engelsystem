@@ -41,6 +41,18 @@ require_once realpath(__DIR__ . '/../includes/controller/shifttypes_controller.p
 require_once realpath(__DIR__ . '/../includes/controller/users_controller.php');
 require_once realpath(__DIR__ . '/../includes/controller/user_angeltypes_controller.php');
 require_once realpath(__DIR__ . '/../includes/controller/user_driver_licenses_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_active_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_arrive_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_export_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_free_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_groups_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_import_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_log_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_questions_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_rooms_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_shifts_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_user_controller.php');
+require_once realpath(__DIR__ . '/../includes/controller/admin_settings_controller.php');
 
 require_once realpath(__DIR__ . '/../includes/helper/graph_helper.php');
 require_once realpath(__DIR__ . '/../includes/helper/internationalization_helper.php');
@@ -60,18 +72,6 @@ if ($maintenance_mode) {
   die();
 }
 
-require_once realpath(__DIR__ . '/../includes/pages/admin_active.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_arrive.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_export.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_free.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_groups.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_import.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_log.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_questions.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_rooms.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_shifts.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_user.php');
-require_once realpath(__DIR__ . '/../includes/pages/admin_settings.php');
 require_once realpath(__DIR__ . '/../includes/pages/guest_login.php');
 require_once realpath(__DIR__ . '/../includes/pages/user_messages.php');
 require_once realpath(__DIR__ . '/../includes/pages/user_myshifts.php');
