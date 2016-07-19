@@ -1,9 +1,7 @@
 <?php
 
-
 function User_update_activ_tshirt() {
 	return sql_query("UPDATE `User` SET `Aktiv` = 0 WHERE `Tshirt` = 0");
-      
 }
 
 function User_select_set_active() {
@@ -22,17 +20,17 @@ function User_set_active($uid) {
 }
 
 function User_actice_force_active() {
-return sql_query("UPDATE `User` SET `Aktiv`=1 WHERE `force_active`=TRUE");
+  return sql_query("UPDATE `User` SET `Aktiv`=1 WHERE `force_active`=TRUE");
 }
 
 
 function User_update_active($id) {
 	return sql_query("UPDATE `User` SET `Aktiv`=1 WHERE `UID`='" . sql_escape($id) . "' LIMIT 1");
-      
+
 }
 function User_update_inactive($id) {
 	return sql_query("UPDATE `User` SET `Aktiv`=0 WHERE `UID`='" . sql_escape($id) . "' LIMIT 1");
-      
+
 }
 
 function User_update_tshirt($id) {
@@ -44,7 +42,6 @@ function User_update_not_tshirt($id) {
 }
 
 function User_select_not_tshirt($shift_sum_formula, $show_all_shifts, $limit) {
-
 	return  sql_select("
       SELECT `User`.*, COUNT(`ShiftEntry`.`id`) as `shift_count`, ${shift_sum_formula} as `shift_length`
       FROM `User` LEFT JOIN `ShiftEntry` ON `User`.`UID` = `ShiftEntry`.`UID`
@@ -53,7 +50,6 @@ function User_select_not_tshirt($shift_sum_formula, $show_all_shifts, $limit) {
       " . ($show_all_shifts ? "" : "AND (`Shifts`.`end` < " . time() . " OR `Shifts`.`end` IS NULL)") . "
       GROUP BY `User`.`UID`
       ORDER BY `force_active` DESC, `shift_length` DESC" . $limit);
-
 }
 
 function Shirt_statistics_needed($size) {
@@ -62,7 +58,5 @@ function Shirt_statistics_needed($size) {
 
 function Shirt_statistics_given($size) {
 	return sql_select_single_cell("SELECT count(*) FROM `User` WHERE `Size`='" . sql_escape($size) . "' AND `Tshirt`=1");
-
 }
-
 ?>
