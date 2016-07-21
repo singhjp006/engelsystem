@@ -37,7 +37,7 @@ function admin_news() {
 
         case 'save':
           list($news) = $news;
-          News_update($_POST["eBetreff"], $_POST["eText"], $_POST["eTreffen"], $id);
+          News_update($_POST["eBetreff"], $_POST["eText"], $_POST["eTreffen"], $id, $user);
           engelsystem_log("News updated: " . $_POST["eBetreff"]);
           success(_("News entry updated."));
           redirect(page_link_to("news"));
