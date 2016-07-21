@@ -50,7 +50,7 @@ function Room_by_name() {
 }
 
 function Room_by_id($id) {
-  return sql_select("SELECT * FROM `Room` WHERE `RID`='" . sql_escape($_REQUEST['id']) . "'");
+  return sql_select("SELECT * FROM `Room` WHERE `RID`='" . sql_escape($id) . "'");
 }
 
 function count_room_by_id_name($name, $id) {
@@ -59,10 +59,6 @@ function count_room_by_id_name($name, $id) {
 
 function update_rooms($name, $from_pentabarf, $public, $number, $id) {
   return sql_query("UPDATE `Room` SET `Name`='" . sql_escape($name) . "', `FromPentabarf`='" . sql_escape($from_pentabarf) . "', `show`='" . sql_escape($public) . "', `Number`='" . sql_escape($number) . "' WHERE `RID`='" . sql_escape($id) . "' LIMIT 1");
-}
-
-function delete_NeededAngelTypes() {
-  return sql_query("DELETE FROM `NeededAngelTypes` WHERE `room_id`='" . sql_escape($id) . "'");
 }
 ?>
 

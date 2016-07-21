@@ -37,7 +37,7 @@ function admin_rooms() {
     }
 
     if (test_request_int('id')) {
-      $room = Room_by_id($id);
+      $room = Room_by_id($_REQUEST['id']);
       if (count($room) > 0) {
         $id = $_REQUEST['id'];
         $name = $room[0]['Name'];
