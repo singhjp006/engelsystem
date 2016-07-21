@@ -23,6 +23,14 @@ require_once realpath(__DIR__ . '/../includes/model/UserDriverLicenses_model.php
 require_once realpath(__DIR__ . '/../includes/model/UserGroups_model.php');
 require_once realpath(__DIR__ . '/../includes/model/User_model.php');
 require_once realpath(__DIR__ . '/../includes/model/Settings_model.php');
+require_once realpath(__DIR__ . '/../includes/model/admin_active_model.php');
+require_once realpath(__DIR__ . '/../includes/model/admin_arrive_model.php');
+require_once realpath(__DIR__ . '/../includes/model/admin_export_model.php');
+require_once realpath(__DIR__ . '/../includes/model/admin_free_model.php');
+require_once realpath(__DIR__ . '/../includes/model/admin_groups_model.php');
+require_once realpath(__DIR__ . '/../includes/model/admin_import_model.php');
+require_once realpath(__DIR__ . '/../includes/model/admin_news_model.php');
+require_once realpath(__DIR__ . '/../includes/model/admin_questions_model.php');
 
 require_once realpath(__DIR__ . '/../includes/view/AngelTypes_view.php');
 require_once realpath(__DIR__ . '/../includes/view/Questions_view.php');
